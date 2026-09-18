@@ -248,6 +248,31 @@ body {
 
 .stats span { font-size: 0.76rem; color: var(--dim); }
 
+.hero__shots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 44rem;
+  margin: 2.5rem auto 0;
+}
+
+.hero__shots figure {
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--edge);
+  box-shadow: 0 10px 28px -20px rgba(41, 98, 255, 0.35);
+}
+
+.hero__shots img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.hero__shots figure:hover img { transform: scale(1.04); }
+
 /* --- marquee ------------------------------------------------------------ */
 .marquee {
   overflow: hidden;
@@ -318,7 +343,11 @@ body {
 .chip:hover { border-color: var(--blue); background: rgba(68, 138, 255, 0.08); }
 
 /* --- product cards ------------------------------------------------------ */
-.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
 
 .card {
   position: relative;
@@ -372,6 +401,52 @@ body {
 .card h3 { font-size: 0.92rem; font-weight: 500; line-height: 1.4; margin: 0.2rem 0 0.5rem; }
 .amt { font-size: 1.1rem; font-weight: 600; }
 .amt s { font-size: 0.82rem; font-weight: 400; color: var(--dim); margin-right: 0.3rem; }
+
+/* --- service cards with images ------------------------------------------ */
+.svcgrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.svc-card {
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  backdrop-filter: blur(12px);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.svc-card:hover {
+  border-color: rgba(68, 138, 255, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px -22px rgba(41, 98, 255, 0.35);
+}
+
+.svc-card__img img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.svc-card__b { padding: 1.15rem 1.25rem 1.25rem; }
+
+.svc-card h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 0.3rem; }
+.svc-card p { font-size: 0.86rem; color: var(--dim); margin-bottom: 1rem; }
+
+.svc-card select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  padding: 0.65rem 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.svc-card select:focus { outline: none; border-color: var(--blue); }
 
 /* --- glass panels ------------------------------------------------------- */
 .svc { display: grid; gap: 1rem; }
@@ -508,8 +583,9 @@ body {
   .glassbar { grid-template-columns: auto 1fr auto; }
   .glassbar button { grid-column: auto; }
   .stats { grid-template-columns: repeat(4, 1fr); }
-  .cards { grid-template-columns: repeat(4, 1fr); }
+  .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.15rem; }
   .svc { grid-template-columns: repeat(2, 1fr); }
+  .svcgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem; }
   .pays { grid-template-columns: repeat(3, 1fr); }
   .foot__grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -522,6 +598,8 @@ body {
 
   .hero { padding-block: 5rem 4rem; }
   .svc { grid-template-columns: repeat(4, 1fr); }
+  .svcgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .hero__shots { gap: 1rem; }
   .promo__in { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 3.5rem; padding: 3rem 2.75rem; align-items: center; }
   .foot__grid { grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 2.5rem; }
 }
