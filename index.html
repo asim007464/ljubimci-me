@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ljubimci.me — Design Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/reset.css">
+<style>
+  :root {
+    --bg: #0C0D12;
+    --card: #14161D;
+    --ink: #F4F5F8;
+    --dim: #969BA8;
+    --accent: #6E8BFF;
+    --line: #242832;
+    --font: 'Inter', system-ui, sans-serif;
+    --wrap: 1240px;
+  }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-block: 2rem;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: var(--wrap);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .designs {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .d {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+
+  .d:hover { transform: translateY(-3px); border-color: #39414F; }
+
+  .d__sw { height: 96px; display: flex; }
+  .d__sw span { flex: 1; }
+
+  .d__b {
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .d__n {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .d h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .d p {
+    font-size: 0.85rem;
+    color: var(--dim);
+    margin-bottom: 0.9rem;
+  }
+
+  .d dl {
+    display: grid;
+    gap: 0.3rem;
+    font-size: 0.78rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .d dl > div { display: flex; gap: 0.5rem; }
+  .d dt { color: #6C727E; min-width: 5.5rem; flex-shrink: 0; }
+  .d dd { color: var(--dim); }
+
+  .d a.open {
+    margin-top: auto;
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 0.83rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.55rem 1.15rem;
+    transition: background 0.2s;
+  }
+
+  .d a.open:hover { background: var(--accent); color: #fff; }
+
+  @media (min-width: 640px) {
+    .designs { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    body { padding-block: 2.5rem; }
+    .designs { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="designs">
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#FBFAF8"></span><span style="background:#16130F"></span><span style="background:#9C4522"></span><span style="background:#F2EFE9"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 01</p>
+        <h3>Editorial</h3>
+        <p>Magazine treatment. Serif headlines, hairline rules, a lead product tile beside a ranked list, categories as a printed index.</p>
+        <dl>
+          <div><dt>Type</dt><dd>Fraunces + Inter</dd></div>
+          <div><dt>Layout</dt><dd>Asymmetric editorial grid</dd></div>
+          <div><dt>Motion</dt><dd>Staggered entrance</dd></div>
+        </dl>
+        <a href="designs/01-editorial/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#FDF8F2"></span><span style="background:#C0603C"></span><span style="background:#3A2A20"></span><span style="background:#7F9070"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 02</p>
+        <h3>Boutique</h3>
+        <p>Warm and retail-friendly. Overlapping image collage, floating pill nav, snap-scroll category rail, accordion services.</p>
+        <dl>
+          <div><dt>Type</dt><dd>DM Serif + DM Sans</dd></div>
+          <div><dt>Layout</dt><dd>Split hero, horizontal rail</dd></div>
+          <div><dt>Motion</dt><dd>Drifting blobs, ticker</dd></div>
+        </dl>
+        <a href="designs/02-boutique/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#FFFFFF"></span><span style="background:#10604A"></span><span style="background:#EDF5F1"></span><span style="background:#0B4636"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 03</p>
+        <h3>Clinical</h3>
+        <p>Institutional and information-dense. Utility bar, search in the header, boarding enquiry form in the hero, real comparison table.</p>
+        <dl>
+          <div><dt>Type</dt><dd>IBM Plex Sans</dd></div>
+          <div><dt>Layout</dt><dd>Lead-capture + table</dd></div>
+          <div><dt>Motion</dt><dd>None — deliberate</dd></div>
+        </dl>
+        <a href="designs/03-clinical/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#FFFFFF"></span><span style="background:#0B0B0B"></span><span style="background:#1B39FF"></span><span style="background:#DBDBDB"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 04</p>
+        <h3>Swiss</h3>
+        <p>Typographic and severe. Oversized headline, numbered sections, products as list rows instead of cards. No shadows, no radii.</p>
+        <dl>
+          <div><dt>Type</dt><dd>Space Grotesk</dd></div>
+          <div><dt>Layout</dt><dd>Hairline grid, list rows</dd></div>
+          <div><dt>Motion</dt><dd>Underline sweeps</dd></div>
+        </dl>
+        <a href="designs/04-swiss/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#F5F8FD"></span><span style="background:#448AFF"></span><span style="background:#6BA3FF"></span><span style="background:#2962FF"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 05</p>
+        <h3>Aurora</h3>
+        <p>Light and premium. Soft blue aurora backdrop, frosted glass panels, gradient headline, scrolling partner marquee.</p>
+        <dl>
+          <div><dt>Type</dt><dd>Sora</dd></div>
+          <div><dt>Layout</dt><dd>Centred, glass surfaces</dd></div>
+          <div><dt>Motion</dt><dd>Mesh gradient, glow</dd></div>
+        </dl>
+        <a href="designs/05-aurora/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#F4F4FB"></span><span style="background:#4B41E0"></span><span style="background:#0FA97E"></span><span style="background:#EEEDFE"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 06</p>
+        <h3>Bento</h3>
+        <p>No stacked sections at all — content lives in mixed-size tiles. Scannable, modern, easy to extend with new modules.</p>
+        <dl>
+          <div><dt>Type</dt><dd>Plus Jakarta Sans</dd></div>
+          <div><dt>Layout</dt><dd>Bento tile grid</dd></div>
+          <div><dt>Motion</dt><dd>Tile lift, glow bloom</dd></div>
+        </dl>
+        <a href="designs/06-bento/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#F6F2E9"></span><span style="background:#101010"></span><span style="background:#FF4A22"></span><span style="background:#D8FF3E"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 07</p>
+        <h3>Bold</h3>
+        <p>Loud and memorable. Condensed display type, hard offset shadows, a diagonal band, rotated sticker. Built for paid social traffic.</p>
+        <dl>
+          <div><dt>Type</dt><dd>Anton + Inter</dd></div>
+          <div><dt>Layout</dt><dd>Diagonal bands, thick rules</dd></div>
+          <div><dt>Motion</dt><dd>Ticker, shadow shift</dd></div>
+        </dl>
+        <a href="designs/07-bold/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+    <article class="d">
+      <div class="d__sw"><span style="background:#FBFBFD"></span><span style="background:#101010"></span><span style="background:#C2740A"></span><span style="background:#E6E8EE"></span></div>
+      <div class="d__b">
+        <p class="d__n">Design 08</p>
+        <h3>Dashboard</h3>
+        <p>Reads as a working product, not a brochure. Persistent filter sidebar, sort pills, removable filter tags, dense result rows, pagination.</p>
+        <dl>
+          <div><dt>Type</dt><dd>Inter</dd></div>
+          <div><dt>Layout</dt><dd>Sidebar + results feed</dd></div>
+          <div><dt>Motion</dt><dd>Minimal, UI states only</dd></div>
+        </dl>
+        <a href="designs/08-dashboard/index.html" class="open">Open design</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+</body>
+</html>

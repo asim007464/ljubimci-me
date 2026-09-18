@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ljubimci.me — search pet products and boarding from across Montenegro.">
+<title>Ljubimci.me — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../shared/reset.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app">
+  <div class="app__in">
+    <a href="#" class="brand"><span class="brand__sq">L</span><span class="brand__t">Ljubimci.me</span></a>
+
+    <form class="omni" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label class="sr-only" for="q">Search</label>
+      <input id="q" type="search" placeholder="Search 2,548 products and 17 partners…">
+      <kbd>/</kbd>
+    </form>
+
+    <div class="app__act">
+      <a href="#partneri" class="btn btn--ghost">For partners</a>
+      <a href="#kontakt" class="btn">List your shop</a>
+    </div>
+
+    <input type="checkbox" id="m" class="chk sr-only">
+    <label for="m" class="burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <nav class="appnav">
+      <a href="#rezultati">Products</a>
+      <a href="#usluge">Boarding</a>
+      <a href="#partneri">For partners</a>
+      <a href="#kontakt">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+
+  <aside class="side">
+    <input type="checkbox" id="filters" class="fchk sr-only">
+    <label for="filters" class="ftoggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+      <span>Filters</span>
+      <em>3 active</em>
+      <svg class="ftoggle__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </label>
+
+    <div class="side__body">
+    <div class="side__grp">
+      <h2>Category</h2>
+      <ul class="radios">
+        <li><label><input type="radio" name="cat" checked> All categories <span>2.548</span></label></li>
+        <li><label><input type="radio" name="cat"> Dogs <span>842</span></label></li>
+        <li><label><input type="radio" name="cat"> Cats <span>613</span></label></li>
+        <li><label><input type="radio" name="cat"> Crates & carriers <span>231</span></label></li>
+        <li><label><input type="radio" name="cat"> Beds & houses <span>198</span></label></li>
+        <li><label><input type="radio" name="cat"> Food <span>276</span></label></li>
+        <li><label><input type="radio" name="cat"> Birds & rodents <span>311</span></label></li>
+        <li><label><input type="radio" name="cat"> Toys <span>77</span></label></li>
+      </ul>
+    </div>
+
+    <div class="side__grp">
+      <h2>Price (€)</h2>
+      <div class="range">
+        <label class="sr-only" for="pmin">From</label>
+        <input id="pmin" type="number" placeholder="0" value="0">
+        <span>–</span>
+        <label class="sr-only" for="pmax">To</label>
+        <input id="pmax" type="number" placeholder="500" value="200">
+      </div>
+    </div>
+
+    <div class="side__grp">
+      <h2>City</h2>
+      <ul class="checks">
+        <li><label><input type="checkbox" checked> Podgorica <span>1.204</span></label></li>
+        <li><label><input type="checkbox"> Budva <span>388</span></label></li>
+        <li><label><input type="checkbox"> Nikšić <span>276</span></label></li>
+        <li><label><input type="checkbox"> Tivat <span>241</span></label></li>
+        <li><label><input type="checkbox"> Herceg Novi <span>190</span></label></li>
+      </ul>
+    </div>
+
+    <div class="side__grp">
+      <h2>Partner</h2>
+      <ul class="checks">
+        <li><label><input type="checkbox"> Family Pet Shop <span>512</span></label></li>
+        <li><label><input type="checkbox"> Pet Corner Tivat <span>241</span></label></li>
+        <li><label><input type="checkbox"> Zoo Hobby <span>333</span></label></li>
+        <li><label><input type="checkbox"> Montvet <span>408</span></label></li>
+      </ul>
+    </div>
+
+    <div class="side__grp">
+      <h2>Payment</h2>
+      <ul class="checks">
+        <li><label><input type="checkbox" checked> PayPal</label></li>
+        <li><label><input type="checkbox" checked> Cash on delivery</label></li>
+      </ul>
+    </div>
+
+    <div class="side__note">
+      <strong>Montenegro only</strong>
+      <p>All partners and delivery are within the country. Orders are fulfilled by the partner shop.</p>
+    </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <section class="banner">
+      <div>
+        <h1>Everything for your pet, in one place</h1>
+        <p>Combined catalogue from 17 pet shops and boarding across Montenegro. Prices updated daily.</p>
+      </div>
+      <ul class="banner__kpi">
+        <li><strong>2.548</strong><span>products</span></li>
+        <li><strong>17</strong><span>partners</span></li>
+        <li><strong>8</strong><span>cities</span></li>
+      </ul>
+    </section>
+
+    <div class="toolbar" id="rezultati">
+      <p class="count"><strong>2.548</strong> results · Podgorica</p>
+      <div class="toolbar__r">
+        <div class="pills">
+          <button class="pill pill--on">Featured</button>
+          <button class="pill">Price ↑</button>
+          <button class="pill">Price ↓</button>
+          <button class="pill">Newest</button>
+        </div>
+        <label class="sr-only" for="perpage">Show</label>
+        <select id="perpage" class="mini"><option>24 per page</option><option>48 per page</option></select>
+      </div>
+    </div>
+
+    <div class="active">
+      <span class="atag">Podgorica <button aria-label="Remove filter">×</button></span>
+      <span class="atag">0 – 200 € <button aria-label="Remove filter">×</button></span>
+      <span class="atag">PayPal <button aria-label="Remove filter">×</button></span>
+      <button class="clear">Clear all</button>
+    </div>
+
+    <section class="feed">
+      <article class="row">
+        <div class="row__img"><img src="https://images.pexels.com/photos/28468158/pexels-photo-28468158.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Premium XL Transport Crate"></div>
+        <div class="row__b">
+          <span class="spon">Sponsored</span>
+          <h3>Premium XL Transport Crate</h3>
+          <p class="by">Pet Shop Podgorica · Toloska Forest</p>
+          <ul class="attrs"><li>Aluminium</li><li>Up to 40 kg</li><li>Available</li></ul>
+        </div>
+        <div class="row__p">
+          <p class="cost">89 €</p>
+          <a href="#" class="btn btn--sm">Details</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="row__img"><img src="https://images.pexels.com/photos/28922232/pexels-photo-28922232.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Indoor dog crate"></div>
+        <div class="row__b">
+          <span class="spon">Sponsored</span>
+          <h3>White Indoor Dog Crate</h3>
+          <p class="by">Zoo Hobby · Podgorica</p>
+          <ul class="attrs"><li>Foldable</li><li>Size L</li><li>Available</li></ul>
+        </div>
+        <div class="row__p">
+          <p class="cost">145 €</p>
+          <a href="#" class="btn btn--sm">Details</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="row__img"><img src="https://images.unsplash.com/photo-1558993457-4bc6ec2c3734?w=700&amp;h=700&amp;fit=crop" alt="Cat food"></div>
+        <div class="row__b">
+          <h3>Dry Cat Food, 3 kg</h3>
+          <p class="by">Family Pet Shop · Podgorica</p>
+          <ul class="attrs"><li>Grain-free</li><li>Adult cats</li><li>Available</li></ul>
+        </div>
+        <div class="row__p">
+          <p class="cost">24 €</p>
+          <a href="#" class="btn btn--sm">Details</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="row__img"><img src="https://images.pexels.com/photos/10875389/pexels-photo-10875389.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Carrier"></div>
+        <div class="row__b">
+          <h3>Cat Carrier, Size M</h3>
+          <p class="by">Pet Corner Tivat</p>
+          <ul class="attrs"><li>Up to 8 kg</li><li>Airline approved</li><li>Reduced</li></ul>
+        </div>
+        <div class="row__p">
+          <p class="cost"><s>42 €</s> 36 €</p>
+          <a href="#" class="btn btn--sm">Details</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="row__img"><img src="https://images.unsplash.com/photo-1562039479-3d5221c1511f?w=700&amp;h=700&amp;fit=crop" alt="Orthopedic bed"></div>
+        <div class="row__b">
+          <h3>Orthopedic Bed, Size L</h3>
+          <p class="by">Montvet · Podgorica</p>
+          <ul class="attrs"><li>Memory foam</li><li>Washable</li><li>Available</li></ul>
+        </div>
+        <div class="row__p">
+          <p class="cost">55 €</p>
+          <a href="#" class="btn btn--sm">Details</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="row__img"><img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700&amp;h=700&amp;fit=crop" alt="Toy set"></div>
+        <div class="row__b">
+          <h3>Dog Toy Set, 5 Pieces</h3>
+          <p class="by">Family Pet Shop · Podgorica</p>
+          <ul class="attrs"><li>Rubber</li><li>Medium breeds</li><li>Available</li></ul>
+        </div>
+        <div class="row__p">
+          <p class="cost">18 €</p>
+          <a href="#" class="btn btn--sm">Details</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="pager">
+      <button class="pg" disabled>←</button>
+      <button class="pg pg--on">1</button>
+      <button class="pg">2</button>
+      <button class="pg">3</button>
+      <span>…</span>
+      <button class="pg">107</button>
+      <button class="pg">→</button>
+    </div>
+
+    <section class="panel" id="usluge">
+      <div class="panel__hd">
+        <h2>Boarding & services</h2>
+        <p>Order depends on partner package</p>
+      </div>
+      <div class="svcgrid">
+        <div class="svc">
+          <label for="s1">Boarding & hotel</label>
+          <select id="s1">
+            <option>Select boarding…</option>
+            <option>Happy Paws, Podgorica — from 15 €/day</option>
+            <option>Pet Hotel Budva — from 12 €/day</option>
+            <option>Care4Pets, Nikšić — from 10 €/day</option>
+          </select>
+        </div>
+        <div class="svc">
+          <label for="s2">Sitting & walking</label>
+          <select id="s2">
+            <option>Select sitter…</option>
+            <option>Pet Sitter CG — from 8 €/hr</option>
+            <option>Pets on Holiday — from 7 €/hr</option>
+          </select>
+        </div>
+        <div class="svc">
+          <label for="s3">Grooming salon</label>
+          <select id="s3">
+            <option>Select salon…</option>
+            <option>Happy Paws Salon — from 20 €</option>
+            <option>Pet Style Bar, Tivat — from 18 €</option>
+          </select>
+        </div>
+        <div class="svc">
+          <label for="s4">Pet transport</label>
+          <select id="s4">
+            <option>Select transport…</option>
+            <option>Happy Paws Transport — from 10 €</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo" id="partneri">
+      <div>
+        <h2>List your shop</h2>
+        <p>We import and update your catalogue automatically. Matching products publish immediately, the rest is reviewed by our team. Sponsored placements are ranked by package and always clearly marked.</p>
+        <a href="#kontakt" class="btn btn--light">Request a quote</a>
+      </div>
+      <dl class="promo__dl">
+        <div><dt>Automatic catalogue</dt><dd>Prices daily</dd></div>
+        <div><dt>Sponsored placements</dt><dd>Featured in search</dd></div>
+        <div><dt>Report</dt><dd>Clicks and enquiries monthly</dd></div>
+      </dl>
+    </section>
+
+  </main>
+</div>
+
+<footer class="foot" id="kontakt">
+  <div class="foot__in">
+    <div>
+      <a href="#" class="brand"><span class="brand__sq">L</span><span class="brand__t">Ljubimci.me</span></a>
+      <p>Catalogue aggregator for pet products and services in Montenegro.</p>
+    </div>
+    <div><h4>Catalogue</h4><a href="#rezultati">Products</a><a href="#usluge">Boarding</a><a href="#usluge">Salons</a></div>
+    <div><h4>Partners</h4><a href="#partneri">List your shop</a><a href="#partneri">Sponsorship</a><a href="#partneri">Guidelines</a></div>
+    <div><h4>Contact</h4><a href="mailto:hello@ljubimci.me">hello@ljubimci.me</a><a href="tel:+38267123456">+382 67 123 456</a><a href="#">Instagram</a></div>
+  </div>
+  <div class="foot__base"><p>© 2026 Ljubimci.me · PayPal · Cash on delivery</p><p>Design 08 — Dashboard</p></div>
+</footer>
+
+</body>
+</html>
