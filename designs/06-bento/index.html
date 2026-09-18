@@ -223,122 +223,118 @@
 
     <article class="t t--svc" id="usluge">
       <p class="t__k">Boarding & services</p>
-      <h2>Someone to watch your pet while you are away</h2>
-      <div class="svcrow">
-        <div>
-          <label for="s1">Boarding & hotel</label>
-          <select id="s1">
-            <option>Select boarding…</option>
-            <option>Happy Paws, Podgorica — from 15 €/day</option>
-            <option>Pet Hotel Budva — from 12 €/day</option>
-            <option>Care4Pets, Nikšić — from 10 €/day</option>
-          </select>
-        </div>
-        <div>
-          <label for="s2">Sitting & walking</label>
-          <select id="s2">
-            <option>Select sitter…</option>
-            <option>Pet Sitter CG — from 8 €/hr</option>
-            <option>Pets on Holiday — from 7 €/hr</option>
-          </select>
-        </div>
-        <div>
-          <label for="s3">Grooming salon</label>
-          <select id="s3">
-            <option>Select salon…</option>
-            <option>Happy Paws Salon — from 20 €</option>
-            <option>Pet Style Bar, Tivat — from 18 €</option>
-          </select>
-        </div>
-        <div>
-          <label for="s4">Pet transport</label>
-          <select id="s4">
-            <option>Select transport…</option>
-            <option>Happy Paws Transport — from 10 €</option>
-          </select>
-        </div>
+      <div class="svcgrid">
+        <article class="svc-card">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&amp;h=420&amp;fit=crop" alt="Dogs in a boarding facility">
+          <div class="svc-card__b">
+            <h3>Boarding</h3>
+            <label class="sr-only" for="s1">Boarding</label>
+            <select id="s1">
+              <option>Select…</option>
+              <option>Happy Paws — 15 €/day</option>
+              <option>Pet Hotel Budva — 12 €/day</option>
+            </select>
+          </div>
+        </article>
+        <article class="svc-card">
+          <img src="https://images.pexels.com/photos/9078745/pexels-photo-9078745.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700&amp;h=420&amp;fit=crop" alt="Dog walker in a park">
+          <div class="svc-card__b">
+            <h3>Sitting</h3>
+            <label class="sr-only" for="s2">Sitting</label>
+            <select id="s2">
+              <option>Select…</option>
+              <option>Pet Sitter CG — 8 €/hr</option>
+              <option>Pets on Holiday — 7 €/hr</option>
+            </select>
+          </div>
+        </article>
+        <article class="svc-card">
+          <img src="https://images.pexels.com/photos/6235243/pexels-photo-6235243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700&amp;h=420&amp;fit=crop" alt="Dog being groomed">
+          <div class="svc-card__b">
+            <h3>Grooming</h3>
+            <label class="sr-only" for="s3">Grooming</label>
+            <select id="s3">
+              <option>Select…</option>
+              <option>Happy Paws Salon — 20 €</option>
+              <option>Pet Style Bar — 18 €</option>
+            </select>
+          </div>
+        </article>
+        <article class="svc-card">
+          <img src="https://images.pexels.com/photos/10875389/pexels-photo-10875389.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700&amp;h=420&amp;fit=crop" alt="Pet carrier">
+          <div class="svc-card__b">
+            <h3>Transport</h3>
+            <label class="sr-only" for="s4">Transport</label>
+            <select id="s4">
+              <option>Select…</option>
+              <option>Happy Paws Transport — 10 €</option>
+            </select>
+          </div>
+        </article>
       </div>
     </article>
 
     <article class="t t--pay">
+      <img class="t--pay__img" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&amp;h=360&amp;fit=crop" alt="">
       <p class="t__k">Payment</p>
       <ul>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-          <div><strong>PayPal</strong><span>Card or PayPal account</span></div>
+          <strong>PayPal</strong>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18v10H3z"/><circle cx="12" cy="12" r="2.5"/></svg>
-          <div><strong>Cash on delivery</strong><span>Cash on delivery</span></div>
+          <strong>Cash on delivery</strong>
         </li>
       </ul>
     </article>
 
     <article class="t t--map">
-      <p class="t__k">Coverage</p>
-      <p class="t__n t__n--sm">8 cities</p>
-      <ul class="towns">
-        <li>Podgorica</li><li>Nikšić</li><li>Budva</li><li>Tivat</li>
-        <li>Herceg Novi</li><li>Bar</li><li>Bijelo Polje</li><li>Kotor</li>
-      </ul>
+      <img class="t--map__bg" src="https://images.unsplash.com/photo-1555992336-fb0d3d7978fa?w=800&amp;h=600&amp;fit=crop" alt="">
+      <div class="t--map__in">
+        <p class="t__k t__k--light">Coverage</p>
+        <p class="t__n t__n--sm">8 cities</p>
+        <ul class="towns">
+          <li>Podgorica</li><li>Nikšić</li><li>Budva</li><li>Tivat</li>
+          <li>Herceg Novi</li><li>Bar</li><li>Bijelo Polje</li><li>Kotor</li>
+        </ul>
+      </div>
     </article>
 
     <article class="t t--partners" id="partneri">
-      <header class="partners__head">
-        <div>
-          <p class="t__k">Partners</p>
-          <h2>Verified shops and boarding across Montenegro</h2>
-        </div>
-        <p class="partners__intro">17 partners in 8 cities — products, boarding and salons in one catalogue. Prices updated daily.</p>
-      </header>
+      <p class="t__k">Partners</p>
       <ul class="partners__grid">
         <li class="partner-card">
-          <p class="partner-card__type">Pet shop</p>
-          <strong>Family Pet Shop</strong>
-          <span>Podgorica · 312 products</span>
-          <em>Food, crates, toys</em>
+          <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Family Pet Shop</strong><span>Podgorica</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Pet shop</p>
-          <strong>Pet Corner Tivat</strong>
-          <span>Tivat · 186 products</span>
-          <em>Carriers, grooming supplies</em>
+          <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Pet Corner Tivat</strong><span>Tivat</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Pet shop</p>
-          <strong>Zoo Hobby</strong>
-          <span>Podgorica · 274 products</span>
-          <em>Crates, houses, accessories</em>
+          <img src="https://images.pexels.com/photos/28468158/pexels-photo-28468158.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Zoo Hobby</strong><span>Podgorica</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Veterinary shop</p>
-          <strong>Montvet</strong>
-          <span>Podgorica · 198 products</span>
-          <em>Beds, food, health care</em>
+          <img src="https://images.unsplash.com/photo-1562039479-3d5221c1511f?w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Montvet</strong><span>Podgorica</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Shop & boarding</p>
-          <strong>Happy Paws</strong>
-          <span>Podgorica · 142 products</span>
-          <em>Boarding from 15 €/day · salon</em>
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Happy Paws</strong><span>Podgorica</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Pet hotel</p>
-          <strong>Pet Hotel Budva</strong>
-          <span>Budva · 89 products</span>
-          <em>Boarding from 12 €/day</em>
+          <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Pet Hotel Budva</strong><span>Budva</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Pet shop</p>
-          <strong>Care4Pets</strong>
-          <span>Nikšić · 156 products</span>
-          <em>Food, transport crates</em>
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Care4Pets</strong><span>Nikšić</span></div>
         </li>
         <li class="partner-card">
-          <p class="partner-card__type">Pet shop</p>
-          <strong>Pet Shop Podgorica</strong>
-          <span>Podgorica · 421 products</span>
-          <em>Crates, carriers, outdoor gear</em>
+          <img src="https://images.pexels.com/photos/28922232/pexels-photo-28922232.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400&amp;h=300&amp;fit=crop" alt="">
+          <div><strong>Pet Shop Podgorica</strong><span>Podgorica</span></div>
         </li>
       </ul>
     </article>
